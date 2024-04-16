@@ -10,7 +10,10 @@ const App = () => {
   return (
     <>
       <NavigationBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <main className='bg-primary-black p-10'>
         {isLoggedIn ? <Dashboard /> : <Hero />}
+
+      </main>
       <Footer/>    
     </>
   )

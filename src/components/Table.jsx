@@ -4,7 +4,7 @@ const Table = () => {
   return (
     <div className="relative overflow-x-auto bg-primary-white mb-24">
             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <caption className="p-5 font-sans text-xl text-left rtl:text-right text-white bg-primary-purple dark:text-white dark:bg-gray-800">
+                <caption className="py-5 font-sans text-xl text-left rtl:text-right text-white bg-primary-black dark:text-white dark:bg-gray-800">
                     Videos
                     <p className="mt-1 text-lg font-sans text-white dark:text-gray-400">
                         All random video links I have picked up around the internet.</p>
