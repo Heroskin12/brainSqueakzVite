@@ -1,13 +1,16 @@
 "use client"
 
-const Table = () => {
-  return (
+const Table = (props) => {
+    const rows = props.rows;
+    console.log('These are the rows ', rows);
+
+    return (
     <div className="relative overflow-x-auto bg-primary-white mb-24">
             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <caption className="py-5 font-sans text-xl text-left rtl:text-right text-white bg-primary-black dark:text-white dark:bg-gray-800">
-                    Videos
+                    {rows[0].tableName}
                     <p className="mt-1 text-lg font-sans text-white dark:text-gray-400">
-                        All random video links I have picked up around the internet.</p>
+                        {rows[1].caption}</p>
                 </caption>
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 shadow-md sm:rounded-lg">
                     <tr>
@@ -31,18 +34,18 @@ const Table = () => {
                 <tbody>
                     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                         <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            React 19 Course
+                            {rows[2].row1.resourceName}
                         </th>
                         <td className="px-6 py-4">
                             <a
-                            href="https://www.youtube.com/watch?v=LDB4uaJ87e0&t=1616s"
+                            href={rows[2].row1.url}
                             target="_blank">Click Here</a>
                         </td>
                         <td className="px-6 py-4">
-                            Coding
+                            {rows[2].row1.category}
                         </td>
                         <td className="px-6 py-4 text-balance">
-                            Goes through some of the new updates in React 19 including the compiler and removal of certain hooks.
+                            {rows[2].row1.comments}
                         </td>
                         <td className="px-6 py-4 text-right">
                             <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
@@ -50,18 +53,18 @@ const Table = () => {
                     </tr>
                     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                         <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Kingdom Hearts Guide
+                            {rows[3].row2.resourceName}
                         </th>
                         <td className="px-6 py-4">
-                        <a
-                            href="https://www.youtube.com/watch?v=KspEEt7k3G0"
+                            <a
+                            href={rows[3].row2.url}
                             target="_blank">Click Here</a>
                         </td>
                         <td className="px-6 py-4">
-                            Gaming
+                            {rows[3].row2.category}
                         </td>
-                        <td className="px-6 py-4">
-                            Guide for the first boss in Traverse town on proud mode I kept getting stuck on.
+                        <td className="px-6 py-4 text-balance">
+                            {rows[3].row2.comments}
                         </td>
                         <td className="px-6 py-4 text-right">
                             <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
@@ -69,18 +72,18 @@ const Table = () => {
                     </tr>
                     <tr className="bg-white dark:bg-gray-800">
                         <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Challengers Review
+                            {rows[4].row3.resourceName}
                         </th>
                         <td className="px-6 py-4">
-                        <a
-                            href="https://www.youtube.com/watch?v=HB_S6Ovunjc&t=1s"
+                            <a
+                            href={rows[4].row3.url}
                             target="_blank">Click Here</a>
                         </td>
                         <td className="px-6 py-4">
-                            Movie Reviews
+                            {rows[4].row3.category}
                         </td>
-                        <td className="px-6 py-4">
-                            Was thinking about seeing this film. One of my favorite reviewers is giving his opinion here.
+                        <td className="px-6 py-4 text-balance">
+                            {rows[4].row3.comments}
                         </td>
                         <td className="px-6 py-4 text-right">
                             <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>

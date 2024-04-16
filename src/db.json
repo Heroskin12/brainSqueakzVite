@@ -1,0 +1,54 @@
+{
+    "Tables" : {
+        "Videos" : [
+                {"tableName": "Videos"},
+                {"caption" : "All random video links I have picked up around the internet."},
+                {"row1": {
+                    "rowNumber": "1",
+                    "resourceName": "React 19 Course",
+                    "url": "https://www.youtube.com/watch?v=LDB4uaJ87e0&t=1616s",
+                    "category": "Coding",
+                    "comments": "Goes through some of the new updates in React 19 including the compiler and removal of certain hooks."
+                }},
+                {"row2": {
+                    "rowNumber": "2",
+                    "resourceName": "Kingdom Hearts Guide",
+                    "url": "https://www.youtube.com/watch?v=KspEEt7k3G0",
+                    "category": "Gaming",
+                    "comments": "Guide for the first boss in Traverse town on proud mode I kept getting stuck on."
+                }},
+                {"row3": {
+                    "rowNumber": "3",
+                    "resourceName": "Challengers Review",
+                    "url": "https://www.youtube.com/watch?v=HB_S6Ovunjc&t=1s",
+                    "category": "Movie Reviews",
+                    "comments": "Was thinking about seeing this film. One of my favorite reviewers is giving his opinion here."
+                }}
+        ],
+        "Posts" : [
+            {"tableName": "Posts"},
+            {"caption" : "Posts I didn't have time to read before."},
+            {"row1": {
+                "rowNumber": "1",
+                "resourceName": "Iran Journalist Attack",
+                "url": "https://www.theguardian.com/world/2024/apr/16/iranian-journalist-attacked-in-london-urges-uk-to-proscribe-revolutionary-guards",
+                "category": "News",
+                "comments": "horrible attack in iran"
+            }},
+            {"row2": {
+                "rowNumber": "2",
+                "resourceName": "Valparaiso - To Do",
+                "url": "https://www.adventurouskate.com/things-to-do-in-valparaiso-chile/",
+                "category": "Travel",
+                "comments": "Ideas for things to do in Valparaiso, Chile."
+            }},
+            {"row3": {
+                "rowNumber": "3",
+                "resourceName": "CSS Flex Align",
+                "url": "https://dev.to/stel/a-little-trick-to-left-align-items-in-last-row-with-flexbox-230l",
+                "category": "Coding",
+                "comments": "A couple of tips on flex align."
+            }}
+        ]
+    }
+}
