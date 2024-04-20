@@ -1,7 +1,7 @@
 {
   "Videos": [
     {
-      "resourceName": "Kingdom Hearts Guide",
+      "resourceName": "Kingdom Guide",
       "url": "https://www.youtube.com/watch?v=KspEEt7k3G0",
       "category": "Gaming",
       "comments": "Guide for the first boss in Traverse town on proud mode I kept getting stuck on.",
@@ -76,35 +76,7 @@
           "dataType": "String"
         }
       ],
-      "id": "8d7b"
-    },
-    {
-      "id": "210d",
-      "tableName": "kjhkjhk",
-      "columnDetails": [
-        "dune"
-      ]
-    },
-    {
-      "id": "0f18",
-      "tableName": "Dune Part 2",
-      "columnDetails": [
-        "rty"
-      ]
-    },
-    {
-      "id": "7f70",
-      "tableName": "Harry Potter Links",
-      "columnDetails": [
-        "dgg"
-      ]
-    },
-    {
-      "id": "27c4",
-      "tableName": "lord of the ring",
-      "columnDetails": [
-        "gt"
-      ]
+      "id": "d261"
     }
   ]
 }

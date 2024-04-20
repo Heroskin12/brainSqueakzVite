@@ -11,6 +11,7 @@
     "server": "json-server --watch src/db.json --port 5000"
   },
   "dependencies": {
+    "@tanstack/react-table": "^8.16.0",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.8.0",
     "react": "^18.2.0",
