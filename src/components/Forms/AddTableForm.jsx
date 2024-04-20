@@ -7,19 +7,20 @@ import { useState } from 'react';
 const AddTableForm = (props) => {
     const [formData, setFormData] = useState({
         tableName: "",
-        columnDetails: [],
+        columnName: ""
     });
     
     const handleChange = (event) => {
         const {name, value} = event.target;
         setFormData((prevFormData) => ({...prevFormData, [name]: value }));
+        console.log(formData)
     }
     
     const submitForm = (event) => {
         event.preventDefault();
         const newTable = {
             tableName: formData.tableName,
-            columnDetails: formData.columnDetails
+            columnName: formData.columnName
         }
         
         fetch('http://localhost:5000/Tables', {
@@ -29,7 +30,7 @@ const AddTableForm = (props) => {
             },
             body: JSON.stringify({
                tableName: newTable.tableName,
-               columnDetails: [newTable.columnDetails]
+               columnName: newTable.columnName
             })
         }).then(response => response.json())
         .then(console.log(newTable))
@@ -47,21 +48,9 @@ const AddTableForm = (props) => {
       <div className='flex items-center'>
         <div className="flex-col">
             <div className="mb-2 block">
-            <Label htmlFor="column1" value="Enter column name..."  className="text-primary-white"/>
+            <Label htmlFor="columnName" value="Enter column name..."  className="text-primary-white"/>
             </div>
-            <TextInput id="column-1" type="text" placeholder="E.g. Name of Resource..." name="columnDetails" value={formData.columnDetails} onChange={handleChange} required />
-        </div>
-        <div className="max-w-md flex-col ps-4">
-            <div className="mb-2 block text-left">
-                <Label htmlFor="dataType" value="Data type" className="text-primary-white" />
-            </div>
-            <Select id="dataType" required>
-                <option>Text</option>
-                <option>Link</option>
-                <option>Number</option>
-                <option>Date</option>
-                <option>Time</option>
-            </Select>
+            <TextInput id="columnName" type="text" placeholder="E.g. Name of Resource..." name="columnDetails" value={formData.columnName} onChange={handleChange} required />
         </div>
         <div className='pt-7 ml-5'>
             <span className='text-2xl text-primary-white px-4 bg-primary-grey rounded-lg'>+</span>

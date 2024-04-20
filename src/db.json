@@ -1,13 +1,6 @@
 {
   "Videos": [
     {
-      "resourceName": "Kingdom Guide",
-      "url": "https://www.youtube.com/watch?v=KspEEt7k3G0",
-      "category": "Gaming",
-      "comments": "Guide for the first boss in Traverse town on proud mode I kept getting stuck on.",
-      "id": "3da3"
-    },
-    {
       "resourceName": "React 19 Course",
       "url": "https://www.youtube.com/watch?v=LDB4uaJ87e0&t=1616s",
       "category": "Coding",
@@ -35,46 +28,22 @@
     {
       "tableName": "Videos",
       "caption": "These are videos I didn't get time to watch",
-      "columnDetails": [
-        {
-          "columnName": "Video Name",
-          "dataType": "String"
-        },
-        {
-          "columnName": "Link",
-          "dataType": "String"
-        },
-        {
-          "columnName": "Category",
-          "dataType": "String"
-        },
-        {
-          "columnName": "Comments",
-          "dataType": "String"
-        }
+      "columns": [
+        "Resource Name",
+        "URL",
+        "Category",
+        "Comments"
       ],
       "id": "22c8"
     },
     {
       "tableName": "Articles",
       "caption": "These are articles I didn't get time to read",
-      "columnDetails": [
-        {
-          "columnName": "Article Name",
-          "dataType": "String"
-        },
-        {
-          "columnName": "Link",
-          "dataType": "String"
-        },
-        {
-          "columnName": "Category",
-          "dataType": "String"
-        },
-        {
-          "columnName": "Comments",
-          "dataType": "String"
-        }
+      "columns": [
+        "Resource Name",
+        "URL",
+        "Category",
+        "Comments"
       ],
       "id": "d261"
     }

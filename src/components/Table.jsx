@@ -6,7 +6,7 @@ import Modal from './Modal'
 
 const Table = (props) => {
     const table = props.table;
-    const columns = table.columnDetails;
+    const columns = table.columns;
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true);
     const [formToggle, setFormToggle] = useState(false);
@@ -27,10 +27,26 @@ const Table = (props) => {
         fetchValues();
     }, []);
 
-    const handleClick = (row) => {
-        console.log('In click handler')
+    const handleEdit = (row) => {
+        console.log('In edit handler')
         setFormToggle(true);
         setSelectedRow(row);
+    }
+
+    const handleDelete = (row) => {
+        console.log('In delete handler');
+        setSelectedRow(row);
+
+        fetch(`http://localhost:5000/${table.tableName}/${row.id}`, {
+            method: 'DELETE',
+            headers: {
+               'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                row
+            })
+        }).then(response => response.json())
+        .then(console.log('Attempted delete'))
     }
 
     return (
@@ -48,14 +64,17 @@ const Table = (props) => {
                 <tr>
                     {columns.map(column => {
                         return (
-                                <th scope="col" key={column.columnName} className="px-6 py-3">
-                                    {column.columnName}
+                                <th scope="col" key={`${table.tableName}-${column}`} className="px-6 py-3">
+                                    {column}
                                 </th>                                    
                         )
                     })}
                     <th scope="col" className="px-6 py-3">
                         <span className="sr-only">Edit</span>
-                    </th>                                
+                    </th>         
+                    <th scope="col" className="px-6 py-3">
+                        <span className="sr-only">Delete</span>
+                    </th>                        
                 </tr>
             </thead>
             <tbody>
@@ -77,7 +96,10 @@ const Table = (props) => {
                                     {row.comments}
                                 </td>
                                 <td className="px-6 py-4 text-right">
-                                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() => handleClick(row)}>Edit</a>
+                                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() => handleEdit(row)}>Edit</a>
+                                </td>
+                                <td className="px-6 py-4 text-right">
+                                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() => handleDelete(row)}>Delete</a>
                                 </td>
                             </tr>
                         )
