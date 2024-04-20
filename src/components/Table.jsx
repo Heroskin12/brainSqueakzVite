@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import EditForm from "./Forms/EditForm";
+import EditRowForm from "./Forms/EditRowForm";
 import Modal from './Modal'
 
 const Table = (props) => {
@@ -52,7 +52,7 @@ const Table = (props) => {
     return (
     <div className="relative overflow-x-auto bg-primary-white mb-24">
         <Modal open={formToggle} onClose={() => setFormToggle(false)}>
-                {selectedRow && <EditForm rowDetails={selectedRow} tableName={table.tableName} />}
+                {selectedRow && <EditRowForm rowDetails={selectedRow} tableName={table.tableName} setFormToggle={setFormToggle} />}
         </Modal>
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <caption className="py-5 font-sans text-xl text-left rtl:text-right text-white bg-primary-black dark:text-white dark:bg-gray-800">

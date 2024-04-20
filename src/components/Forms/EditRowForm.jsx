@@ -4,7 +4,7 @@ import { Button, Checkbox, Label, TextInput, Select } from "flowbite-react";
 import { useState } from 'react';
 
 
-const EditForm = (props) => {
+const EditRowForm = (props) => {
     console.log(props);
 
     const [formData, setFormData] = useState({
@@ -13,6 +13,16 @@ const EditForm = (props) => {
         category: props.rowDetails.category,
         comments: props.rowDetails.comments
     });
+
+    const fetchData = async (tableName) => {
+        try {
+          const response = await fetch(`http://localhost:5000/${tableName}`); 
+          const jsonData = await response.json();
+          setData(jsonData);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      };
     
     const handleChange = (event) => {
         const {name, value} = event.target;
@@ -36,8 +46,10 @@ const EditForm = (props) => {
         }).then(response => response.json())
         .then(console.log('Attempted'))
 
-        // props.fetchValues()
-    }
+        props.setFormToggle(false)
+        
+        }
+        
 
   return (
     <form className="flex max-w-md flex-col gap-4">
@@ -75,4 +87,4 @@ const EditForm = (props) => {
   );
 }
 
-export default EditForm;
+export default EditRowForm;

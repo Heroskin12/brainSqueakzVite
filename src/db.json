@@ -1,7 +1,7 @@
 {
   "Videos": [
     {
-      "resourceName": "React 19 Course",
+      "resourceName": "React 0 Course",
       "url": "https://www.youtube.com/watch?v=LDB4uaJ87e0&t=1616s",
       "category": "Coding",
       "comments": "Goes through some of the new updates in React 19 including the compiler and removal of certain hooks.",
@@ -15,13 +15,6 @@
       "category": "Gaming",
       "comments": "Guide for the first boss in Traverse town on proud mode I kept getting stuck on.",
       "id": "809c"
-    },
-    {
-      "resourceName": "React 19 Course",
-      "url": "https://www.youtube.com/watch?v=LDB4uaJ87e0&t=1616s",
-      "category": "Coding",
-      "comments": "Goes through some of the new updates in React 19 including the compiler and removal of certain hooks.",
-      "id": "271d"
     }
   ],
   "Tables": [
